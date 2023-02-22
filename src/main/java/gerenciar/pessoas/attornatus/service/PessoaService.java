@@ -29,6 +29,7 @@ public class PessoaService {
 		return pessoaRepository.findById(id);
 	}
 
+	//método para listar todas as pessoas cadastradas no banco de dados
 	@Transactional
 	public List<Pessoa> listarPessoas() {
 		return pessoaRepository.findAll();

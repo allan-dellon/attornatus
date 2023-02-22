@@ -1,6 +1,7 @@
 package gerenciar.pessoas.attornatus.service;
 
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,10 @@ public class EnderecoService {
 	@Transactional
 	public Optional<Endereco> consultarEnderecoPorPessoaId(Long id) {
 		return enderecoRepository.findById(id);
+	}
+
+	public List<Endereco> consultarEnderecos() {
+		return enderecoRepository.findAll();
 	}
 
 }
